@@ -1,6 +1,7 @@
+import { MagnifyingGlass } from "phosphor-react";
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/Summary";
-import { PriceHighlight, TransactionsContainer, TransactionsTable } from "./styles";
+import { PriceHighlight, SearchForm, TransactionsContainer, TransactionsTable } from "./styles";
 
 export function Transactions() {
     return (
@@ -8,6 +9,13 @@ export function Transactions() {
             <Header />
             <Summary />
             <TransactionsContainer>
+                <SearchForm>
+                    <input type="text" placeholder="Busque por transações"/>
+                    <button>
+                        <MagnifyingGlass size={20}/>
+                        <strong>Buscar</strong>
+                    </button>
+                </SearchForm>
                 <TransactionsTable>
                     <tbody>
                         <tr>
